@@ -1,1 +1,377 @@
-h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Roof Resource - Transparent Roofing Solutions</title>
+  <meta name="description" content="Central Texas's premier residential roofing specialist. Transparent at-cost pricing, 24-hour proposals, and two-week installations. Serving Austin-San Antonio corridor.">
+  <meta property="og:title" content="The Roof Resource - Texas's Gold Standard for Transparent Roofing" />
+  <meta property="og:description" content="Revolutionary transparent pricing and rapid service. No markups, no pressure. Just honest roofing solutions for Central Texas homeowners." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/d97706/ffffff?text=The+Roof+Resource" />
+  <meta property="og:url" content="https://www.theroofresource.com" />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="icon" href="https://fav.farm/🏠" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --orange: #d97706;
+      --dark-blue: #1e3a8a;
+      --light: #f5f5f5;
+      --dark: #111;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark-blue);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    header, nav, main, footer, section {
+      width: 100%;
+    }
+    .global-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(30, 58, 138, 0.7);
+    }
+    .global-header img.logo {
+      width: 180px;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--orange) 100%);
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    .hero-overlay {
+      position: relative;
+      background: rgba(30, 58, 138, 0.75);
+      padding: 4rem 2rem;
+      max-width: 900px;
+      z-index: 1;
+      margin: 0 1rem;
+      border-radius: 12px;
+    }
+    .hero-overlay h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero-overlay p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: #f5f5f5;
+    }
+    .cta-button {
+      background-color: var(--orange);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background-color: #b45309;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark-blue);
+    }
+    .section p {
+      font-size: 1.125rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+    .section ul {
+      list-style: disc inside;
+      color: #333;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    .section strong {
+      color: var(--orange);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .feature-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(30, 58, 138, 0.08);
+      transition: transform 0.3s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(30, 58, 138, 0.1);
+    }
+    .feature-box h3 {
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .testimonials {
+      background: var(--dark-blue);
+      color: #fff;
+      padding: 4rem 2rem;
+    }
+    .testimonial {
+      max-width: 900px;
+      margin: 0 auto;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--orange);
+    }
+    .cta {
+      background: var(--orange);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta p {
+      font-size: 1.125rem;
+    }
+    .cta form {
+      max-width: 600px;
+      margin: 2rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .cta input,
+    .cta textarea {
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .cta button {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--dark-blue);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta button:hover {
+      background-color: #1e40af;
+    }
+    footer {
+      padding: 2rem;
+      background: var(--dark);
+      color: #aaa;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    @media (max-width: 768px) {
+      .hero-overlay h1 {
+        font-size: 2.25rem;
+      }
+      .global-header {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cta form {
+        padding: 0 1rem;
+      }
+      .section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="global-header">
+    <img src="https://via.placeholder.com/180x60/d97706/ffffff?text=The+Roof+Resource" alt="The Roof Resource Logo" class="logo" />
+  </header>
+
+  <section class="hero" role="banner">
+    <video autoplay muted loop playsinline>
+      <source src="https://via.placeholder.com/1920x1080.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1>Transparent Roofing. Honest Pricing. No Surprises.</h1>
+      <p>Central Texas's premier roofing specialist. At-cost pricing with 24-hour proposals and two-week installations. Zero markups. Zero pressure.</p>
+      <a href="#consultation-form" class="cta-button">Get Your Free Proposal</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <h2>Revolutionizing Roofing Through Transparency</h2>
+      <p><strong>Designed for homeowners and property investors</strong> who demand honesty, quality, and speed, The Roof Resource eliminates the chaos and complexity of traditional roofing contractors.</p>
+      <ul>
+        <li><strong>24-Hour Proposal Delivery</strong> with clear, at-cost pricing</li>
+        <li><strong>Two-Week Installation Guarantee</strong> from contract to completion</li>
+        <li><strong>Zero Hidden Markups</strong> - flat project fee, transparent replacement costs</li>
+        <li><strong>95%+ Customer Satisfaction</strong> through education-first approach</li>
+      </ul>
+      <p>We eliminate uncertainty so you can make confident roofing decisions without high-pressure tactics or inflated prices.</p>
+    </section>
+
+    <section class="section" aria-label="Why Choose Us">
+      <h2>Texas's Gold Standard for Roofing Solutions</h2>
+      <p>Serving the Austin-San Antonio corridor across Travis, Williamson, Hays, and northern Bexar counties. Central Texas weather demands reliable roofing solutions. Our unique approach delivers:</p>
+      <ul>
+        <li><strong>True replacement costs</strong> without contractor markups</li>
+        <li><strong>Rapid response</strong> to storm damage and urgent repairs</li>
+        <li><strong>Trusted partnerships</strong> with insurance agents, property managers, and real estate professionals</li>
+        <li><strong>Proven track record</strong> of increasing property ROI while minimizing hassle</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-label="Core Services">
+      <h2>Comprehensive Roofing Services</h2>
+      <div class="features">
+        <div class="feature-box">
+          <h3>Storm Damage Assessment</h3>
+          <p>Expert inspection and documentation for insurance claims. We guide you through the entire process with transparent communication.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Roof Replacement</h3>
+          <p>Complete residential roof replacement with premium materials. At-cost pricing means you get the best value without hidden fees.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Emergency Repairs</h3>
+          <p>Fast response to leaks and damage. We protect your investment with immediate action and honest assessments.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Preventive Maintenance</h3>
+          <p>Regular inspections and maintenance plans that extend roof life and prevent costly emergency repairs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="Client Testimonials">
+      <h2 style="text-align:center; margin-bottom:2rem;">What Our Clients Say</h2>
+      <blockquote class="testimonial">
+        "The Roof Resource delivered exactly what they promised - a detailed proposal in 24 hours with transparent pricing and completed installation in 12 days. No pressure, no surprises, just professional service from start to finish."
+        <cite>– M. Henderson, Property Investor, Austin TX</cite>
+      </blockquote>
+    </section>
+
+    <section class="cta" id="consultation-form" aria-label="Consultation Form">
+      <h2>Get Your Free Transparent Proposal Today</h2>
+      <p>Experience the difference of honest roofing. 24-hour proposal delivery. At-cost pricing. Two-week installation guarantee.</p>
+      <form>
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" />
+        <textarea name="message" rows="4" placeholder="Tell us about your roofing needs"></textarea>
+        <button type="submit">Request Free Proposal</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- SMS Opt-in Compliance Footer -->
+  <div style="max-width: 600px; margin: 2rem auto; padding: 2rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; color: #475569; line-height: 1.6;">
+    <h4 style="color: #1e3a8a; margin-bottom: 1rem; font-size: 1rem;">Stay Connected via Text</h4>
+    <section id="mobile-optin"> 
+      <form id="smsForm" action="https://victoryvision.app.n8n.cloud/webhook/sms/optin" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <input type="tel" name="phone" placeholder="+1 512-555-1234" required 
+                 style="flex: 1; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem;">
+          <button type="submit" 
+                  style="background: #d97706; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600; white-space: nowrap;">
+            Text Me
+          </button>
+        </div>
+        
+        <label style="display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer;">
+          <input type="checkbox" name="sms_consent" required style="margin-top: 0.25rem;">
+          <span>By checking this box, you agree to receive SMS marketing messages from The Roof Resource. Message frequency may vary. Standard message and data rates may apply. Reply STOP to opt out. Reply HELP for help. We will not share mobile information with third parties for promotional or marketing purposes.</span>
+        </label>
+        
+        <input type="hidden" name="use_case" value="MARKETING">
+      </form>
+      
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: #64748b;">
+        By signing up via text, you agree to receive recurring marketing messages from The Roof Resource at the phone number provided. Consent is not a condition of purchase. Message frequency varies. Msg & data rates may apply. 
+        View our <a href="/privacy.html" style="color: #1e3a8a; text-decoration: underline;">Privacy Policy</a> and <a href="/terms.html" style="color: #1e3a8a; text-decoration: underline;">Terms of Service</a>.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('smsForm').onsubmit = function(e) {
+      e.preventDefault();
+      fetch(this.action, {method: 'POST', body: new FormData(this)});
+      alert('Thanks! Check your phone.');
+      this.reset();
+    };
+  </script>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 The Roof Resource. Built with integrity and precision. All Rights Reserved.</p>
+  </footer>
+
+  <img src="https://victoryvision.app.n8n.cloud/webhook/pixel/track?page_id=theroofresource_homepage" width="1" height="1" style="display:none;" alt="Tracking Pixel"/>
+
+</body>
+</html>
