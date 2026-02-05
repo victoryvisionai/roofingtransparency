@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Roof Resource - Transparent Roofing Solutions</title>
-  <meta name="description" content="Central Texas's premier residential roofing specialist. Transparent at-cost pricing, 24-hour proposals, and two-week installations. Serving Austin-San Antonio corridor.">
-  <meta property="og:title" content="The Roof Resource - Texas's Gold Standard for Transparent Roofing" />
-  <meta property="og:description" content="Revolutionary transparent pricing and rapid service. No markups, no pressure. Just honest roofing solutions for Central Texas homeowners." />
+  <title>The Roof Resource - Premium Roofing for Investment Properties</title>
+  <meta name="description" content="Premium residential roof replacements for single and multi-family property portfolios. Virtual proposals in 24 hours, installation in 2 weeks. At-cost pricing, no markups. Serving property managers and investors nationwide.">
+  <meta property="og:title" content="The Roof Resource - Your One-Stop Shop for Portfolio Roofing" />
+  <meta property="og:description" content="Simplify property management with transparent at-cost roofing. 24-hour proposals, 2-week installations, 5-year workmanship warranty. Built for investment property portfolios." />
   <meta property="og:image" content="https://via.placeholder.com/1200x630/d97706/ffffff?text=The+Roof+Resource" />
   <meta property="og:url" content="https://www.theroofresource.com" />
   <meta name="theme-color" content="#d97706" />
@@ -81,9 +81,9 @@
     }
     .hero-overlay {
       position: relative;
-      background: rgba(30, 58, 138, 0.75);
+      background: rgba(30, 58, 138, 0.85);
       padding: 4rem 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       z-index: 1;
       margin: 0 1rem;
       border-radius: 12px;
@@ -98,6 +98,26 @@
       font-weight: 400;
       margin-bottom: 2rem;
       color: #f5f5f5;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--orange);
+      display: block;
+    }
+    .hero-stat-label {
+      font-size: 0.9rem;
+      color: #e5e7eb;
     }
     .cta-button {
       background-color: var(--orange);
@@ -130,10 +150,22 @@
       margin-bottom: 1.5rem;
     }
     .section ul {
-      list-style: disc inside;
+      list-style: none;
       color: #333;
       margin-top: 1rem;
       margin-bottom: 2rem;
+    }
+    .section ul li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.75rem;
+    }
+    .section ul li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: bold;
     }
     .section strong {
       color: var(--orange);
@@ -160,6 +192,17 @@
       margin-bottom: 1rem;
       font-size: 1.25rem;
     }
+    .pain-points {
+      background: #fef3c7;
+      padding: 3rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    .pain-points h3 {
+      color: var(--dark-blue);
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+    }
     .testimonials {
       background: var(--dark-blue);
       color: #fff;
@@ -167,7 +210,7 @@
     }
     .testimonial {
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0 auto 3rem auto;
       font-style: italic;
       font-weight: 400;
     }
@@ -199,7 +242,8 @@
       gap: 1rem;
     }
     .cta input,
-    .cta textarea {
+    .cta textarea,
+    .cta select {
       padding: 0.75rem 1rem;
       border: none;
       border-radius: 4px;
@@ -218,6 +262,15 @@
     .cta button:hover {
       background-color: #1e40af;
     }
+    .warranty-badge {
+      background: var(--dark-blue);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
     footer {
       padding: 2rem;
       background: var(--dark);
@@ -228,6 +281,12 @@
     @media (max-width: 768px) {
       .hero-overlay h1 {
         font-size: 2.25rem;
+      }
+      .hero-stats {
+        gap: 1.5rem;
+      }
+      .hero-stat-number {
+        font-size: 2rem;
       }
       .global-header {
         padding: 0.5rem 1rem;
@@ -255,75 +314,124 @@
       Your browser does not support the video tag.
     </video>
     <div class="hero-overlay">
-      <h1>Transparent Roofing. Honest Pricing. No Surprises.</h1>
-      <p>Central Texas's premier roofing specialist. At-cost pricing with 24-hour proposals and two-week installations. Zero markups. Zero pressure.</p>
-      <a href="#consultation-form" class="cta-button">Get Your Free Proposal</a>
+      <h1>Your One-Stop Shop for Portfolio Roofing</h1>
+      <p>Premium residential roof replacements for property managers and investors nationwide. At-cost pricing with zero markups. Virtual proposals in 24 hours. Installed in 2 weeks.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-number">24hr</span>
+          <span class="hero-stat-label">Proposal Delivery</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">2wks</span>
+          <span class="hero-stat-label">Installation Timeline</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">0%</span>
+          <span class="hero-stat-label">Material Markups</span>
+        </div>
+      </div>
+      <a href="#consultation-form" class="cta-button">Get Your Virtual Proposal</a>
     </div>
   </section>
 
   <main>
     <section class="section">
-      <h2>Revolutionizing Roofing Through Transparency</h2>
-      <p><strong>Designed for homeowners and property investors</strong> who demand honesty, quality, and speed, The Roof Resource eliminates the chaos and complexity of traditional roofing contractors.</p>
+      <h2>Built for Investment Property Portfolios</h2>
+      <p><strong>Managing single-family and multi-family rental properties across multiple states?</strong> Stop juggling multiple contractors, inconsistent pricing, and endless vendor management. The Roof Resource is your dedicated roofing partner designed specifically for property managers and investors who need:</p>
       <ul>
-        <li><strong>24-Hour Proposal Delivery</strong> with clear, at-cost pricing</li>
-        <li><strong>Two-Week Installation Guarantee</strong> from contract to completion</li>
-        <li><strong>Zero Hidden Markups</strong> - flat project fee, transparent replacement costs</li>
-        <li><strong>95%+ Customer Satisfaction</strong> through education-first approach</li>
+        <li><strong>Certainty over chaos:</strong> Virtual proposals delivered in 24 hours with clear, at-cost pricing</li>
+        <li><strong>Simplicity over complexity:</strong> One trusted partner for all your portfolio roofing needs</li>
+        <li><strong>Transparency over pressure:</strong> True replacement costs with zero hidden markups</li>
+        <li><strong>Speed over delays:</strong> Complete installations within two weeks from contract signing</li>
       </ul>
-      <p>We eliminate uncertainty so you can make confident roofing decisions without high-pressure tactics or inflated prices.</p>
+      <div class="warranty-badge">5-Year Workmanship Warranty + Lifetime Manufacturer Warranty</div>
+    </section>
+
+    <section class="pain-points">
+      <h3>We Solve the Problems Property Managers Face Daily</h3>
+      <p>Managing 10+ year old roofs across multiple properties shouldn't require a full-time job. We eliminate:</p>
+      <ul>
+        <li><strong>Vendor chaos:</strong> No more sourcing, vetting, and managing multiple contractors</li>
+        <li><strong>Pricing uncertainty:</strong> At-cost model means you know the true replacement cost upfront</li>
+        <li><strong>Storm damage headaches:</strong> Expert insurance claim navigation with transparent documentation</li>
+        <li><strong>Trust issues:</strong> Thoroughly vetted, insured installer partners with proven track records</li>
+        <li><strong>Time waste:</strong> Virtual proposals eliminate endless on-site appointment scheduling</li>
+        <li><strong>Material disputes:</strong> 100% full refund on all excess materials returned</li>
+      </ul>
     </section>
 
     <section class="section" aria-label="Why Choose Us">
-      <h2>Texas's Gold Standard for Roofing Solutions</h2>
-      <p>Serving the Austin-San Antonio corridor across Travis, Williamson, Hays, and northern Bexar counties. Central Texas weather demands reliable roofing solutions. Our unique approach delivers:</p>
-      <ul>
-        <li><strong>True replacement costs</strong> without contractor markups</li>
-        <li><strong>Rapid response</strong> to storm damage and urgent repairs</li>
-        <li><strong>Trusted partnerships</strong> with insurance agents, property managers, and real estate professionals</li>
-        <li><strong>Proven track record</strong> of increasing property ROI while minimizing hassle</li>
-      </ul>
-    </section>
-
-    <section class="section" aria-label="Core Services">
-      <h2>Comprehensive Roofing Services</h2>
+      <h2>How We Maximize Your Portfolio ROI</h2>
+      <p>Property managers and investors choose The Roof Resource because we reduce both the monetary cost and administrative burden of roof replacements:</p>
       <div class="features">
         <div class="feature-box">
-          <h3>Storm Damage Assessment</h3>
-          <p>Expert inspection and documentation for insurance claims. We guide you through the entire process with transparent communication.</p>
+          <h3>At-Cost Pricing Model</h3>
+          <p>True replacement costs with zero material markups. Our flat project fee covers expert coordination, not inflated materials. You save 15-30% compared to traditional contractors.</p>
         </div>
         <div class="feature-box">
-          <h3>Roof Replacement</h3>
-          <p>Complete residential roof replacement with premium materials. At-cost pricing means you get the best value without hidden fees.</p>
+          <h3>Virtual Proposal System</h3>
+          <p>No on-site appointments required. Upload property photos, receive detailed proposals within 24 hours. Scale across your entire portfolio without travel logistics.</p>
         </div>
         <div class="feature-box">
-          <h3>Emergency Repairs</h3>
-          <p>Fast response to leaks and damage. We protect your investment with immediate action and honest assessments.</p>
+          <h3>Manufacturer Choice</h3>
+          <p>Select from leading shingle manufacturers based on your portfolio strategy. Standard to premium options with transparent pricing on every tier.</p>
         </div>
         <div class="feature-box">
-          <h3>Preventive Maintenance</h3>
-          <p>Regular inspections and maintenance plans that extend roof life and prevent costly emergency repairs.</p>
+          <h3>Third-Party Attic Inspection</h3>
+          <p>Every installation includes professional attic inspection by national 3rd party company. Ensures proper ventilation, accurate scoping, and long-term roof performance.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Vetted Installer Network</h3>
+          <p>All installer partners are thoroughly vetted, fully insured, and held to strict quality standards. White-glove service that respects tenant occupancy.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Two-Week Installation</h3>
+          <p>From contract to completion in 14 days. Minimize vacancy risk and tenant disruption with guaranteed fast execution.</p>
         </div>
       </div>
     </section>
 
+    <section class="section" aria-label="Process">
+      <h2>Simple Process. Professional Results.</h2>
+      <p>We've streamlined roofing for property portfolios into four clear steps:</p>
+      <ol style="list-style: decimal inside; font-size: 1.125rem; color: #333;">
+        <li style="margin-bottom: 1rem;"><strong>Submit Property Details:</strong> Upload photos and basic property information through our virtual system</li>
+        <li style="margin-bottom: 1rem;"><strong>Receive Transparent Proposal:</strong> Within 24 hours, get detailed at-cost proposal with manufacturer options and warranty details</li>
+        <li style="margin-bottom: 1rem;"><strong>Schedule Installation:</strong> Choose installation date within two-week window that works for tenant occupancy</li>
+        <li style="margin-bottom: 1rem;"><strong>Quality Verification:</strong> Professional third-party attic inspection ensures proper installation and ventilation compliance</li>
+      </ol>
+    </section>
+
     <section class="testimonials" aria-label="Client Testimonials">
-      <h2 style="text-align:center; margin-bottom:2rem;">What Our Clients Say</h2>
+      <h2 style="text-align:center; margin-bottom:2rem;">What Property Managers Say</h2>
       <blockquote class="testimonial">
-        "The Roof Resource delivered exactly what they promised - a detailed proposal in 24 hours with transparent pricing and completed installation in 12 days. No pressure, no surprises, just professional service from start to finish."
-        <cite>– M. Henderson, Property Investor, Austin TX</cite>
+        "Managing 47 single-family rentals across Texas, I was spending 10+ hours per week on roofing quotes alone. The Roof Resource's virtual proposal system and at-cost pricing eliminated the vendor chaos. We've completed 12 roof replacements through them with zero issues and significant cost savings."
+        <cite>– Sarah Chen, Portfolio Manager, DFW Property Solutions</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        "Finally, a roofing company that understands investment property operations. The two-week installation timeline and transparent pricing model has saved us thousands in both hard costs and administrative overhead. Their third-party inspections give us confidence every job is done right."
+        <cite>– Marcus Rodriguez, Managing Partner, Lone Star Investment Properties</cite>
       </blockquote>
     </section>
 
     <section class="cta" id="consultation-form" aria-label="Consultation Form">
-      <h2>Get Your Free Transparent Proposal Today</h2>
-      <p>Experience the difference of honest roofing. 24-hour proposal delivery. At-cost pricing. Two-week installation guarantee.</p>
+      <h2>Ready to Simplify Your Portfolio Roofing?</h2>
+      <p>Get your first virtual proposal in 24 hours. At-cost pricing. Two-week installation. Zero vendor headaches.</p>
       <form>
         <input type="text" name="name" placeholder="Your Full Name" required />
         <input type="email" name="email" placeholder="Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number" />
-        <textarea name="message" rows="4" placeholder="Tell us about your roofing needs"></textarea>
-        <button type="submit">Request Free Proposal</button>
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="company" placeholder="Company Name" />
+        <select name="portfolio_size">
+          <option value="">Portfolio Size</option>
+          <option value="1-10">1-10 properties</option>
+          <option value="11-25">11-25 properties</option>
+          <option value="26-50">26-50 properties</option>
+          <option value="51-100">51-100 properties</option>
+          <option value="100+">100+ properties</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Tell us about your roofing needs (number of properties needing replacement, locations, timeline, etc.)"></textarea>
+        <button type="submit">Request Virtual Proposal</button>
       </form>
     </section>
   </main>
